@@ -5,9 +5,10 @@ DATABASE SETUP
 --------------
 
 1.  Create a new database for the purpose of the survey as a LIMITED account.
-
+    
+    ```sql
     CREATE DATABASE survey;
-
+    ```
 
 2.  Create a table to store the survey results.
 
