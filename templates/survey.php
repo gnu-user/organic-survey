@@ -25,15 +25,40 @@
     </div>
     <div class="row">
         <div class="span8">
-            <!-- Info about the survey -->
-            <div id="activeinfo" class="alert alert-info">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <p>
-                    Fill out the following survey to the best of your abilities, if there are any questions
-                    for which you need clarification <strong>please let us know</strong>.
-                </p>
-            </div>
-            <form class="well form-horizontal" action="active.php" method="post" accept-charset="UTF-8">
+            <!-- Survey info/notification box -->
+            <?php
+                if (isset($_SESSION['invalid']))
+                {
+                    echo '<div id="surveyinvalid" class="alert alert-error">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <p>
+                                <strong>Invalid Information Provided!</strong> The information you provided is not valid
+                                please complete the survey and enter valid information.
+                            </p>
+                          </div>';
+                }
+                elseif (isset($_SESSION['success']))
+                {
+                    echo '<div id="surveyvalid" class="alert alert-success">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <p>
+                                <strong>Survey Submitted!</strong> Thank you, your survey has been successfully
+                                submitted!
+                            </p>
+                          </div>';
+                }
+                else
+                {
+                    echo '<div id="surveyinfo" class="alert alert-info">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <p>
+                                Fill out the following survey to the best of your abilities, if there are any questions
+                                for which you need clarification <strong>please let us know</strong>.
+                            </p>
+                          </div>';
+                }
+            ?>
+            <form class="well form-horizontal" action="submit.php" method="post" accept-charset="UTF-8">
                 <fieldset>
                     <!-- ORGANIC or NON-ORGANIC -->
                     <div class="control-group">
