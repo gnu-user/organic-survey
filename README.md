@@ -1,7 +1,8 @@
 Organic Food Survey
 ====================
 
-The survey website for the environmental studies organic food project.
+The survey website for the environmental studies organic food project. For instructions
+on setting up the organic food survey to host it locally yourself please see: [SETUP.md](SETUP.md).
 
 Copyright (Really Copyleft)
 ---------------------------
