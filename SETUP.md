@@ -1,9 +1,6 @@
 SETUP INSTRUCTIONS
 ===================
 
-SETUP INSTRUCTIONS
-==================
-
 DATABASE SETUP
 --------------
 
