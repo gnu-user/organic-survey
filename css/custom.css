@@ -19,8 +19,16 @@
  */
 
 /* Fix the default font colour for alerts */
-.alert#activeinfo, .alert#alreadyactive {
+.alert#surveyinfo {
     color: #505050;
+}
+
+.alert#surveyinvalid {
+    color: #990000;
+}
+
+.alert#surveyvalid {
+    color: #527729;
 }
 
 /* Some additional styling for the footer */
