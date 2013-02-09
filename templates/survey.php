@@ -35,6 +35,17 @@
             </div>
             <form class="well form-horizontal" action="active.php" method="post" accept-charset="UTF-8">
                 <fieldset>
+                    <!-- ORGANIC or NON-ORGANIC -->
+                    <div class="control-group">
+                        <label for="organic" class="control-label"><strong><strong>I think the pizza I ate was:</strong></strong></label>
+                        <div class="controls">
+                            <select id="organic" name="organic" class="input-xlarge">
+                                <option></option>
+                                <option value="organic">ORGANIC</option>
+                                <option value="non-organic">NON-ORGANIC</option>
+                            </select>
+                        </div>
+                    </div>
                     <!-- TASTE -->
                     <div class="control-group">
                         <label for="taste" class="control-label"><strong><strong>The pizza taste was:</strong></strong></label>
