@@ -37,12 +37,12 @@
                 <fieldset>
                     <!-- ORGANIC or NON-ORGANIC -->
                     <div class="control-group">
-                        <label for="organic" class="control-label"><strong><strong>I think the pizza I ate was:</strong></strong></label>
+                        <label for="is_organic" class="control-label"><strong><strong>I think the pizza I ate was:</strong></strong></label>
                         <div class="controls">
-                            <select id="organic" name="organic" class="input-xlarge">
+                            <select id="is_organic" name="is_organic" class="input-xlarge">
                                 <option></option>
-                                <option value="organic">ORGANIC</option>
-                                <option value="non-organic">NON-ORGANIC</option>
+                                <option value="1">ORGANIC</option>
+                                <option value="0">NON-ORGANIC</option>
                             </select>
                         </div>
                     </div>
@@ -104,9 +104,9 @@
                     </div>
                     <!-- VISUAL -->
                     <div class="control-group">
-                        <label for="taste" class="control-label"><strong>The visual appeal was:</strong></label>
+                        <label for="visual" class="control-label"><strong>The visual appeal was:</strong></label>
                         <div class="controls">
-                            <select id="taste" name="taste" class="input-xlarge">
+                            <select id="visual" name="visual" class="input-xlarge">
                                 <option></option>
                                 <option value="1">Worst looking pizza I've ever seen</option>
                                 <option value="2">Poor aesthetic appeal</option>
@@ -118,9 +118,9 @@
                     </div>
                     <!-- AROMA -->
                     <div class="control-group">
-                        <label for="taste" class="control-label"><strong>The aroma was:</strong></label>
+                        <label for="aroma" class="control-label"><strong>The aroma was:</strong></label>
                         <div class="controls">
-                            <select id="taste" name="taste" class="input-xlarge">
+                            <select id="aroma" name="aroma" class="input-xlarge">
                                 <option></option>
                                 <option value="1">Worst smelling pizza I've ever had</option>
                                 <option value="2">Poor aroma</option>
