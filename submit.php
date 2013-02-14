@@ -54,6 +54,7 @@ if (       isset($_POST['is_organic']) && is_numeric($_POST['is_organic'])
     $visual     = $_POST['visual'];
     $aroma      = $_POST['aroma'];
 
+    /* Submit the survey results */
     submit_survey($mysqli_conn, $is_organic, $taste, $texture, $crust, $toppings, $visual, $aroma);
 
     /* Survey results recorded, redirect to main page */
