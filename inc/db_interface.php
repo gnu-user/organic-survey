@@ -24,6 +24,7 @@
  * Submit the survey results into the database.
  *
  * @param mysqli $mysqli_conn The mysqli connection object
+ * @param boolean $test_cat The test category pizza was taken from
  * @param boolean $is_organic Is it ORGANIC
  * @param int $taste The taste on scale of 1 to 5
  * @param int $texture The texture on scale of 1 to 5
@@ -33,15 +34,15 @@
  * @param int $aroma The appearance on scale of 1 to 5
  *
  */
-function submit_survey($mysqli_conn, $is_organic, $taste, $texture, $crust, $toppings, $visual, $aroma)
+function submit_survey($mysqli_conn, $test_cat, $is_organic, $taste, $texture, $crust, $toppings, $visual, $aroma)
 {
     $results_table = 'results';
 
     /* Add the survey results to the results table */
-    if ($stmt = $mysqli_conn->prepare("INSERT INTO ".$results_table." VALUES (?, ?, ?, ?, ?, ?, ?, CURDATE())"))
+    if ($stmt = $mysqli_conn->prepare("INSERT INTO ".$results_table." VALUES (?, ?, ?, ?, ?, ?, ?, ?, CURDATE())"))
     {
         /* bind parameters for markers */
-        $stmt->bind_param('iiiiiii', $is_organic, $taste, $texture, $crust, $toppings, $visual, $aroma);
+        $stmt->bind_param('iiiiiiii', $test_cat, $is_organic, $taste, $texture, $crust, $toppings, $visual, $aroma);
 
         /* execute query */
         $stmt->execute();

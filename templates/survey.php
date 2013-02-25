@@ -60,6 +60,17 @@
             ?>
             <form class="well form-horizontal" action="submit.php" method="post" accept-charset="UTF-8">
                 <fieldset>
+                    <!-- PIZZA FROM TEST 1 (ORGANIC) or TEST 2 (NON-ORGANIC) -->
+                    <div class="control-group">
+                        <label for="test_cat" class="control-label"><strong><strong>I ate a slice of pizza from:</strong></strong></label>
+                        <div class="controls">
+                            <select id="test_cat" name="test_cat" class="input-xlarge">
+                                <option></option>
+                                <option value="1">TEST 1 CATEGORY</option>
+                                <option value="0">TEST 2 CATEGORY</option>
+                            </select>
+                        </div>
+                    </div>
                     <!-- ORGANIC or NON-ORGANIC -->
                     <div class="control-group">
                         <label for="is_organic" class="control-label"><strong><strong>I think the pizza I ate was:</strong></strong></label>

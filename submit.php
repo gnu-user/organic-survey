@@ -37,7 +37,8 @@ if (!valid_mysqli_connect($mysqli_conn))
 /* 
  * If all of the survey information is set add the results to the results table 
  */
-if (       isset($_POST['is_organic']) && is_numeric($_POST['is_organic']) 
+if (       isset($_POST['test_cat']) && is_numeric($_POST['test_cat']) 
+        && isset($_POST['is_organic']) && is_numeric($_POST['is_organic']) 
         && isset($_POST['taste']) && is_numeric($_POST['taste']) 
         && isset($_POST['texture']) && is_numeric($_POST['texture']) 
         && isset($_POST['crust']) && is_numeric($_POST['crust'])
@@ -46,6 +47,7 @@ if (       isset($_POST['is_organic']) && is_numeric($_POST['is_organic'])
         && isset($_POST['aroma']) && is_numeric($_POST['aroma'])
     )
 {
+    $test_cat   = $_POST['test_cat'];
     $is_organic = $_POST['is_organic'];
     $taste      = $_POST['taste'];
     $texture    = $_POST['texture'];
@@ -54,7 +56,7 @@ if (       isset($_POST['is_organic']) && is_numeric($_POST['is_organic'])
     $visual     = $_POST['visual'];
     $aroma      = $_POST['aroma'];
 
-    submit_survey($mysqli_conn, $is_organic, $taste, $texture, $crust, $toppings, $visual, $aroma);
+    submit_survey($mysqli_conn, $test_cat, $is_organic, $taste, $texture, $crust, $toppings, $visual, $aroma);
 
     /* Survey results recorded, redirect to main page */
     $_SESSION['success'] = "success";
