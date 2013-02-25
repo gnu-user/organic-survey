@@ -15,6 +15,7 @@ DATABASE SETUP
     ```sql
     CREATE TABLE results  
     (  
+        test_cat    BOOLEAN NOT NULL,
         is_organic  BOOLEAN NOT NULL, 
         taste       TINYINT UNSIGNED NOT NULL,  
         texture     TINYINT UNSIGNED NOT NULL, 
