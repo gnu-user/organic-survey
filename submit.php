@@ -57,7 +57,7 @@ if (       isset($_POST['test_cat']) && is_numeric($_POST['test_cat'])
     $aroma      = $_POST['aroma'];
 
     /* Submit the survey results */
-    submit_survey($mysqli_conn, $is_organic, $taste, $texture, $crust, $toppings, $visual, $aroma);
+    submit_survey($mysqli_conn, $test_cat, $is_organic, $taste, $texture, $crust, $toppings, $visual, $aroma);
 
     /* Survey results recorded, redirect to main page */
     $_SESSION['success'] = "success";
