@@ -7,12 +7,14 @@ DATABASE SETUP
 1.  Create a new database for the purpose of the survey as a LIMITED account.
     
     ```sql
-    CREATE DATABASE survey;
+    CREATE DATABASE organic_survey;
     ```
 
 2.  Create a table to store the survey results.
 
     ```sql
+    USE organic_survey;
+    
     CREATE TABLE results  
     (  
         test_cat    BOOLEAN NOT NULL,
