@@ -31,7 +31,7 @@
 
 
 /* Database access */
-$db_user = '';
-$db_pass = '';
-$db_name = '';
+$db_user = 'jon';
+$db_pass = 'test123';
+$db_name = 'organic_survey';
 ?>
